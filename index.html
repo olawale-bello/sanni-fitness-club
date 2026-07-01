@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,15 +73,7 @@
       overflow: hidden; background: var(--blk);
     }
 
-    .hero-ghost {
-      position: absolute; inset: 0; z-index: 0;
-      pointer-events: none; overflow: hidden; display: flex; align-items: center;
-    }
-    .hero-ghost-txt {
-      font-family: 'Doner', sans-serif; font-size: 40vw; text-transform: uppercase;
-      color: rgba(204,255,12,.03); white-space: nowrap; letter-spacing: -.02em;
-      line-height: 1; margin-left: -1%; flex-shrink: 0;
-    }
+    .hero-ghost { display: none; }
 
     /* Portrait — transparent PNG sits naturally on black bg */
     .hero-portrait {
@@ -346,9 +337,25 @@
       .hamburger { display: flex; }
       .hero-headline { font-size: clamp(38px, 10.5vw, 60px); white-space: normal; }
       .hl span { white-space: normal; }
-      .hero-portrait { height: 60%; opacity: .5; }
-      .hero-text-guard { background: linear-gradient(to top, rgba(0,0,0,.98) 0%, rgba(0,0,0,.7) 50%, rgba(0,0,0,.2) 100%); }
-      .hero-content-wrap { padding-bottom: 60px; }
+      .hero { justify-content: flex-start; }
+      .hero-portrait {
+        position: static;
+        display: block;
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        transform: none;
+        object-fit: initial;
+        object-position: initial;
+        -webkit-mask-image: linear-gradient(to top, transparent 0%, black 14%);
+        mask-image: linear-gradient(to top, transparent 0%, black 14%);
+      }
+      .hero-text-guard { display: none; }
+      .hero-content-wrap {
+        padding-bottom: 60px;
+        background: var(--blk);
+        flex: 1;
+      }
       .svcs-hdr { grid-template-columns: 1fr; gap: 20px; }
       .stats-inner { grid-template-columns: 1fr; }
       .stat-item + .stat-item::before { display: none; }
@@ -724,6 +731,3 @@
 </script>
 </body>
 </html>
-=======
-
->>>>>>> e47ec0c41dddcfaeafcda6db07c9cb7f1ac91003
