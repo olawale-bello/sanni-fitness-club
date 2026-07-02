@@ -641,11 +641,11 @@
       </div>
       <form class="cform rv d1" onsubmit="handleSubmit(event)">
         <div class="frow">
-          <div class="fg"><label class="flbl">First Name</label><input type="text" class="fi" placeholder="John" required></div>
-          <div class="fg"><label class="flbl">Last Name</label><input type="text" class="fi" placeholder="Smith" required></div>
+          <div class="fg"><label class="flbl">First Name</label><input type="text" class="fi" name="firstName" placeholder="John" required></div>
+          <div class="fg"><label class="flbl">Last Name</label><input type="text" class="fi" name="lastName" placeholder="Smith" required></div>
         </div>
-        <div class="fg"><label class="flbl">Email Address</label><input type="email" class="fi" placeholder="john@email.com" required></div>
-        <div class="fg"><label class="flbl">Phone Number</label><input type="tel" class="fi" placeholder="+44 7000 000 000"></div>
+        <div class="fg"><label class="flbl">Email Address</label><input type="email" class="fi" name="email" placeholder="john@email.com" required></div>
+        <div class="fg"><label class="flbl">Phone Number</label><input type="tel" class="fi" name="phone" placeholder="+44 7000 000 000"></div>
         <div class="fg">
           <label class="flbl">I'm Interested In</label>
           <select class="fsel">
@@ -659,7 +659,7 @@
         </div>
         <div class="fg">
           <label class="flbl">Tell Me About Your Goals</label>
-          <textarea class="fta" placeholder="What are you looking to achieve? Any injuries or limitations?"></textarea>
+          <textarea class="fta" name="goals" placeholder="What are you looking to achieve? Any injuries or limitations?"></textarea>
         </div>
         <button type="submit" class="btn btn-lime" id="submitBtn" style="width:100%;justify-content:center;padding:16px 32px;">Book Free Consultation &rarr;</button>
       </form>
@@ -723,13 +723,33 @@
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
   }, { threshold: 0.12 });
   document.querySelectorAll('.rv').forEach(el => io.observe(el));
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     const btn = document.getElementById('submitBtn');
-    btn.textContent = "&#10003; Sent &mdash; We'll be in touch soon!";
-    btn.style.background = '#1a1a1a';
-    btn.style.color = 'var(--lime)';
+    const form = e.target;
     btn.disabled = true;
+    btn.textContent = 'Sending...';
+    try {
+      const res = await fetch('https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        btn.innerHTML = "&#10003; Sent &mdash; We'll be in touch soon!";
+        btn.style.background = '#1a1a1a';
+        btn.style.color = 'var(--lime)';
+        form.reset();
+      } else {
+        btn.innerHTML = 'Something went wrong &mdash; please try again';
+        btn.style.color = '#ff4444';
+        btn.disabled = false;
+      }
+    } catch(err) {
+      btn.innerHTML = 'Something went wrong &mdash; please try again';
+      btn.style.color = '#ff4444';
+      btn.disabled = false;
+    }
   }
 </script>
 </body>
