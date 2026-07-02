@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sanni Fitness Club | Strength Â· Performance Â· Rehabilitation</title>
+  <title>Sanni Fitness Club | Strength &middot; Performance &middot; Rehabilitation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
     .lime { color: var(--lime); }
     .container { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
 
-    /* â”€â”€â”€ BUTTONS â”€â”€â”€ */
+    /* --- BUTTONS --- */
     .btn {
       display: inline-flex; align-items: center; gap: 8px;
       padding: 16px 32px; font-family: 'Doner', sans-serif;
@@ -39,7 +39,7 @@
     .btn-red { background: var(--red); color: var(--w); }
     .btn-red:hover { background: #ff2233; transform: translateY(-2px); }
 
-    /* â”€â”€â”€ NAV â”€â”€â”€ */
+    /* --- NAV --- */
     .nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
       padding: 20px 0; transition: background .3s, padding .3s, border-color .3s;
@@ -66,7 +66,7 @@
     .mobile-nav a:hover { color: var(--lime); }
     .mobile-nav-close { position: absolute; top: 24px; right: 28px; font-size: 26px; cursor: pointer; color: var(--w); background: none; border: none; }
 
-    /* â”€â”€â”€ HERO &mdash; full bleed, portrait floats right, text bottom-left â”€â”€â”€ */
+    /* --- HERO &mdash; full bleed, portrait floats right, text bottom-left --- */
     .hero {
       position: relative; min-height: 100vh;
       display: flex; flex-direction: column; justify-content: flex-end;
@@ -152,14 +152,14 @@
     @keyframes bar { 0%,100% { width:18px; opacity:.3; } 50% { width:36px; opacity:.7; } }
     .hscroll-txt { font-size: 10px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--w40); }
 
-    /* â”€â”€â”€ TICKER â”€â”€â”€ */
+    /* --- TICKER --- */
     .ticker { overflow: hidden; background: var(--d2); padding: 14px 0; border-top: 1px solid var(--w15); border-bottom: 1px solid var(--w15); }
     .ticker-inner { display: inline-flex; white-space: nowrap; animation: tick 30s linear infinite; }
     .ticker-inner .t { font-family: 'Doner', sans-serif; font-size: 14px; text-transform: uppercase; letter-spacing: .06em; color: var(--w70); padding: 0 24px; }
     .ticker-inner .sep { color: var(--lime); padding: 0 4px; font-size: 10px; }
     @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-    /* â”€â”€â”€ SECTION COMMONS â”€â”€â”€ */
+    /* --- SECTION COMMONS --- */
     section { padding: 104px 0; }
     .sec-label { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
     .sec-bar   { width: 28px; height: 2px; background: var(--lime); flex-shrink: 0; }
@@ -168,7 +168,7 @@
     .sec-body  { font-size: 15px; color: var(--w70); line-height: 1.75; max-width: 500px; }
     .rule { height: 1px; background: linear-gradient(to right, transparent, var(--w15), transparent); }
 
-    /* â”€â”€â”€ SERVICES â”€â”€â”€ */
+    /* --- SERVICES --- */
     .svcs-sec { background: var(--d1); }
     .svcs-hdr { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: end; margin-bottom: 56px; }
     .svc-list { border-top: 1px solid var(--w15); }
@@ -184,7 +184,7 @@
     .svc-arrow { font-size: 20px; color: rgba(255,255,255,.12); transition: all .25s; padding-left: 20px; }
     .svc-row:hover .svc-arrow { color: var(--w); transform: translateX(4px); }
 
-    /* â”€â”€â”€ STATS â”€â”€â”€ */
+    /* --- STATS --- */
     .stats-sec { background: var(--d2); padding: 0; border-top: 1px solid var(--w15); border-bottom: 1px solid var(--w15); }
     .stats-inner { display: grid; grid-template-columns: repeat(3,1fr); padding: 72px 0; }
     .stat-item { text-align: center; padding: 0 40px; position: relative; }
@@ -192,7 +192,7 @@
     .stat-num { font-family: 'Doner', sans-serif; font-size: clamp(60px, 7vw, 88px); color: var(--w); line-height: 1; letter-spacing: -.02em; display: block; margin-bottom: 10px; }
     .stat-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .16em; color: var(--w40); }
 
-    /* â”€â”€â”€ ABOUT &mdash; portrait with transparent bg sits on dark naturally â”€â”€â”€ */
+    /* --- ABOUT &mdash; portrait with transparent bg sits on dark naturally --- */
     .about-sec { background: var(--blk); position: relative; overflow: hidden; }
     .about-bg-num {
       position: absolute; font-family: 'Doner', sans-serif;
@@ -231,7 +231,7 @@
     .cred  { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; color: var(--w70); }
     .cred-dot { width: 5px; height: 5px; background: var(--w40); flex-shrink: 0; border-radius: 50%; }
 
-    /* â”€â”€â”€ SPECIALIST â”€â”€â”€ */
+    /* --- SPECIALIST --- */
     .spec-sec { background: var(--d1); }
     .spec-hdr { margin-bottom: 60px; }
     .spec-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; }
@@ -244,7 +244,7 @@
     .spec-title { font-family: 'Doner', sans-serif; font-size: 19px; text-transform: uppercase; margin-bottom: 12px; }
     .spec-desc  { font-size: 13.5px; color: var(--w70); line-height: 1.7; }
 
-    /* â”€â”€â”€ TESTIMONIALS &mdash; white â”€â”€â”€ */
+    /* --- TESTIMONIALS &mdash; white --- */
     .testi-sec { background: #FFFFFF; }
     .testi-hdr { margin-bottom: 56px; }
     .testi-hdr .sec-bar { background: var(--blk); }
@@ -261,7 +261,7 @@
     .t-name { font-size: 13px; font-weight: 600; color: var(--blk); }
     .t-goal { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: .08em; }
 
-    /* â”€â”€â”€ CHALLENGE â”€â”€â”€ */
+    /* --- CHALLENGE --- */
     .chal-sec { background: var(--red); padding: 88px 0; }
     .chal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
     .chal-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
@@ -283,7 +283,7 @@
     .chal-spaces { font-family: 'Doner', sans-serif; font-size: 32px; color: var(--lime); }
     .chal-phone  { font-family: 'Doner', sans-serif; font-size: 24px; color: var(--w); }
 
-    /* â”€â”€â”€ CONTACT â”€â”€â”€ */
+    /* --- CONTACT --- */
     .contact-sec { background: var(--d1); }
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
     .contact-intro { font-size: 15px; color: var(--w70); line-height: 1.78; margin-bottom: 32px; }
@@ -303,7 +303,7 @@
     .fsel option { background: var(--d2); }
     .fta { resize: vertical; min-height: 120px; }
 
-    /* â”€â”€â”€ FOOTER â”€â”€â”€ */
+    /* --- FOOTER --- */
     footer { background: var(--blk); border-top: 1px solid var(--w15); padding: 56px 0 28px; }
     .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 64px; margin-bottom: 48px; }
     .foot-desc { font-size: 13.5px; color: var(--w70); line-height: 1.75; margin-top: 16px; max-width: 270px; }
@@ -320,12 +320,12 @@
     .wa { position: fixed; bottom: 28px; right: 28px; z-index: 900; width: 52px; height: 52px; background: #25D366; color: #fff; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: transform .2s; }
     .wa:hover { transform: scale(1.08); }
 
-    /* â”€â”€â”€ REVEAL â”€â”€â”€ */
+    /* --- REVEAL --- */
     .rv { opacity: 0; transform: translateY(28px); transition: opacity .65s ease, transform .65s ease; }
     .rv.on { opacity: 1; transform: translateY(0); }
     .d1 { transition-delay: .1s; } .d2 { transition-delay: .2s; } .d3 { transition-delay: .3s; }
 
-    /* â”€â”€â”€ RESPONSIVE â”€â”€â”€ */
+    /* --- RESPONSIVE --- */
     @media (max-width: 1024px) {
       .spec-grid { grid-template-columns: 1fr 1fr; }
       .hcard-1, .hcard-2, .hero-rating { display: none; }
@@ -591,7 +591,7 @@
       <div>
         <div class="chal-eyebrow"><span class="chal-live">Live Now</span><span class="chal-eye-t">Current Programme</span></div>
         <h2 class="chal-title">6-Week Boxing<br>&amp; Strength<br>Challenge</h2>
-        <p class="chal-sub">Burn Fat Â· Build Strength Â· Improve Fitness</p>
+        <p class="chal-sub">Burn Fat &middot; Build Strength &middot; Improve Fitness</p>
         <div class="chal-items">
           <div class="chal-item"><div class="chal-icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="10" width="10" height="10" rx="2"/><path d="M12 10V6a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v4"/><path d="M16 10V8a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v6a6 6 0 0 1-6 6H8a6 6 0 0 1-6-6"/></svg></div>Boxing Conditioning</div>
           <div class="chal-item"><div class="chal-icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="6.5" y1="6.5" x2="17.5" y2="17.5"/><polyline points="8 6 6 6 6 8"/><line x1="8" y1="8" x2="5" y2="5"/><polyline points="16 18 18 18 18 16"/><line x1="16" y1="16" x2="19" y2="19"/></svg></div>Strength Training</div>
@@ -612,7 +612,7 @@
         <div class="chal-row"><span class="chal-k">Level</span><span class="chal-v">Beginner Friendly</span></div>
         <div style="margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);">
           <div style="font-size:11px;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px;">Spaces Available</div>
-          <div class="chal-spaces">6â€“8 Only</div>
+          <div class="chal-spaces">6&ndash;8 Only</div>
           <div style="font-size:11px;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.1em;margin-top:14px;margin-bottom:4px;">Contact</div>
           <div class="chal-phone">07522 593 887</div>
         </div>
@@ -701,7 +701,7 @@
       </div>
     </div>
     <div class="foot-bottom">
-      <div class="foot-copy">Â© 2025 Sanni Fitness Club. All rights reserved.</div>
+      <div class="foot-copy">&copy; 2025 Sanni Fitness Club. All rights reserved.</div>
       <div class="foot-credit">Designed by <a href="https://walebello.framer.website" target="_blank">Myndzone Media</a></div>
     </div>
   </div>
@@ -725,7 +725,7 @@
   function handleSubmit(e) {
     e.preventDefault();
     const btn = document.getElementById('submitBtn');
-    btn.textContent = "âœ“ Sent &mdash; We'll be in touch soon!";
+    btn.textContent = "&#10003; Sent &mdash; We'll be in touch soon!";
     btn.style.background = '#1a1a1a';
     btn.style.color = 'var(--lime)';
     btn.disabled = true;
